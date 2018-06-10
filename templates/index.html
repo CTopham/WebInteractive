@@ -63,10 +63,11 @@ function buildPlot() {
     
         console.log(response.ID);
         console.log(response.Sample);
+        console.log(selDataset);
 
         var data = [{
-            values: [1166,2858,481,2263,],
-            labels: [163,126,113,78,],
+            values: (response.Sample),
+            labels: (response.ID),
             type: "pie"
             }];
 
@@ -76,6 +77,7 @@ function buildPlot() {
              };
 
         Plotly.newPlot("pie", data, layout);
+
     });
 }
 
